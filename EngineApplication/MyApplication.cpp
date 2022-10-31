@@ -32,14 +32,22 @@ void MyApplication::Paint()
     {
         m_MyEnginePtr->SetColor(RGB(255, 0, 0));
 
-        m_MyEnginePtr->FillEllipse(m_PointsVec[0].x, m_PointsVec[0].y, 4, 4);
+        /*m_MyEnginePtr->FillEllipse(m_PointsVec[0].x, m_PointsVec[0].y, 4, 4);
 
         for (int count = 1; count < (int)m_PointsVec.size(); ++count)
         {
             m_MyEnginePtr->DrawLine(m_PointsVec[count-1].x, m_PointsVec[count-1].y, m_PointsVec[count].x, m_PointsVec[count].y);
             m_MyEnginePtr->FillEllipse(m_PointsVec[count].x, m_PointsVec[count].y, 4, 4);
+        }*/
+
+        for (int i = 0; i < int(m_PointsVec.size()); i++)
+        {
+            m_MyEnginePtr->DrawRect(m_PointsVec[i].x, m_PointsVec[i].y, 100, 100);
         }
+       
     }
+
+   
 }
 
 void MyApplication::Activate(bool isActive)

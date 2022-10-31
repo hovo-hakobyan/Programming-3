@@ -31,6 +31,7 @@ public:
 	void FillEllipse(int x1, int y1, int radiusX, int radiusY);
 	void DrawLine(int x1, int y1, int x2, int y2);
 	void SetTitle(const std::wstring& text);
+	void DrawRect(int left, int top, int width, int height);
 
 private:
 	//-------------------------------------------------

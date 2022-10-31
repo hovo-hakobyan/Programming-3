@@ -193,3 +193,12 @@ void MyEngine::SetTitle(const std::wstring& text)
     SendMessage(m_hWnd, WM_SETTEXT, 0, (LPARAM) text.c_str());
 }
 
+void MyEngine::DrawRect(int left, int top, int width, int height)
+{ 
+    DrawLine(left, top, left, top + height);
+    DrawLine(left, top + height, left + width, top + height);
+    DrawLine(left + width, top + height, left + width, top);
+    DrawLine(left + width, top, left, top);
+
+}
+
